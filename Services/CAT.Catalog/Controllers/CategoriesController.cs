@@ -41,5 +41,21 @@ namespace CAT.Catalog.Controllers
             return CreateActionResultInstance(response);
         }
 
+        [HttpPut]
+        public async Task<IActionResult> Update(CategoryUpdateDto categoryUpdateDto)
+        {
+            var response = await _categoryService.UpdateAsync(categoryUpdateDto);
+
+            return CreateActionResultInstance(response);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var response = await _categoryService.DeleteAsync(id);
+
+            return CreateActionResultInstance(response);
+        }
+
     }
 }

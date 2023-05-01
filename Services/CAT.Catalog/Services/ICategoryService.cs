@@ -9,9 +9,13 @@ namespace CAT.Catalog.Services
 	{
         Task<Response<List<CategoryDto>>> GetAllAsync();
 
+        Task<Response<CategoryDto>> GetByIdAsync(string id);
+
         Task<Response<CategoryDto>> CreateAsync(CategoryCreateDto categoryCreateDto);
 
-        Task<Response<CategoryDto>> GetByIdAsync(string id);
+        Task<Response<NoContent>> UpdateAsync(CategoryUpdateDto categoryUpdateDto);
+
+        Task<Response<NoContent>> DeleteAsync(string id);
     }
 }
 

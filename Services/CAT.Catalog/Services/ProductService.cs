@@ -97,6 +97,8 @@ namespace CAT.Catalog.Services
         {
             var updateProduct = _mapper.Map<Product>(productUpdateDto);
 
+            updateProduct.UpdatedTime = DateTime.Now;
+
             var result = await _productCollection.FindOneAndReplaceAsync(x => x.Id == productUpdateDto.Id, updateProduct);
 
             if (result == null)
