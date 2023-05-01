@@ -54,6 +54,8 @@ namespace CAT.Catalog.Controllers
         {
             var response = await _categoryService.DeleteAsync(id);
 
+           // await response.MutateInAsync(id.ToString(), options => options.Upsert("deleted", DateTime.Now));
+
             return CreateActionResultInstance(response);
         }
 
