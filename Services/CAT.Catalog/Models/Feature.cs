@@ -5,7 +5,7 @@ namespace CAT.Catalog.Models
 	{
 		public string Unit { get; set; }
 
-		public string Size { get; set; } 
+		public string? Size { get; set; } 
 	}
 }
 

@@ -11,10 +11,13 @@ namespace CAT.Catalog.Models
 
 		public string Name { get; set; }
 
-        public string Description { get; set; }
+        public string? Description { get; set; }
 
         [BsonRepresentation(BsonType.DateTime)]
         public DateTime CreatedTime { get; set; }
+
+		[BsonRepresentation(BsonType.DateTime)]
+		public DateTime UpdatedTime { get; internal set;}
     }
 }
 
