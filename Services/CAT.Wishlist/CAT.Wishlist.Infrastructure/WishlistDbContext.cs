@@ -1,9 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CAT.Wishlist.Infrastructure
 {
@@ -11,7 +6,7 @@ namespace CAT.Wishlist.Infrastructure
     {
         public const string DEFAULT_SCHEMA = "listing";
 
-        public WishlistDbContext(DbContextOptions<WishlistDbContext> options):base(options)
+        public WishlistDbContext(DbContextOptions<WishlistDbContext> options) : base(options)
         {
         }
 
@@ -23,7 +18,7 @@ namespace CAT.Wishlist.Infrastructure
         {
             modelBuilder.Entity<Domain.WishlistAggregate.Wishlist>().ToTable("Wishlists", DEFAULT_SCHEMA);
 
-            modelBuilder.Entity<Domain.WishlistAggregate.WishlistItem>().ToTable("Wishlists", DEFAULT_SCHEMA);
+            modelBuilder.Entity<Domain.WishlistAggregate.WishlistItem>().ToTable("WishlistItems", DEFAULT_SCHEMA);
 
             modelBuilder.Entity<Domain.WishlistAggregate.WishlistItem>().Property(x => x.Price).HasColumnType("decimal(18,2)");
 
