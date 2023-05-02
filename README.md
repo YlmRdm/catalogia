@@ -3,7 +3,6 @@
 This project includes some CRUD operations with endpoints using .Net Microservices.
 
 ## Further
-
 ---
 
 ### v0.5.0
