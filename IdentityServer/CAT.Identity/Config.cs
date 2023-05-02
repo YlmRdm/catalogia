@@ -15,6 +15,7 @@ namespace CAT.Identity
         public static IEnumerable<ApiResource> ApiResources => new ApiResource[]
         {
             new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
+            new ApiResource("resource_wishlist"){Scopes={"wishlist_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -30,7 +31,8 @@ namespace CAT.Identity
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                new ApiScope("catalog_fullpermission", "Full Permission for Catalog API"),
+                new ApiScope("catalog_fullpermission", "Full Permission for Catalog Service"),
+                new ApiScope("wishlist_fullpermission", "Full Permission for Wishlist Service"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -52,7 +54,7 @@ namespace CAT.Identity
                     AllowOfflineAccess = true,
                     ClientSecrets = {new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-                    AllowedScopes = {IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.OfflineAccess, IdentityServerConstants.LocalApi.ScopeName, "roles" },
+                    AllowedScopes = {"wishlist_fullpermission", IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.OfflineAccess, IdentityServerConstants.LocalApi.ScopeName, "roles" },
                     
                     // Access Token Lifetime: 1 hour
                     AccessTokenLifetime = 1*60*60,

@@ -20,6 +20,7 @@ namespace CAT.Wishlist.Domain.WishlistAggregate
 
         public IReadOnlyCollection<WishlistItem> WishlistItems => _wishlistItems;
 
+        public Wishlist() { }
         public Wishlist(string creatorId, Label label) 
         {
             _wishlistItems = new List<WishlistItem>();
@@ -39,6 +40,11 @@ namespace CAT.Wishlist.Domain.WishlistAggregate
                 _wishlistItems.Add(newWishlistItem);
             }
 
+        }
+
+        public void AddWishlistItem(string productId, string productName, string productUrl)
+        {
+            throw new NotImplementedException();
         }
 
         public decimal GetTotalPrice => _wishlistItems.Sum(x => x.Price);
