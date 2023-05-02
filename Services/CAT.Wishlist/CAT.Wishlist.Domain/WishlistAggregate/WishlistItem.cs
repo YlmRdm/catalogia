@@ -17,6 +17,8 @@ namespace CAT.Wishlist.Domain.WishlistAggregate
 
         public Decimal Price { get; private set; }
 
+        public WishlistItem() { }
+
         public WishlistItem(string productId, string productName, string productUrl, decimal price)
         {
             ProductId = productId;
