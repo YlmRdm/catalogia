@@ -4,11 +4,6 @@ This project includes some CRUD operations with endpoints using .Net Microservic
 
 ## Further
 ---
-
-### v0.5.0
-- [ ] Developing Gateway using Ocelot package.[#be]
-
-
 ### v0.6.0
 - [ ] Developing the Frontend side using React or the latest version of Angular.[#fe] 
 - [ ] Creating own Identity Service to replace IdentityServer4.[#be]
