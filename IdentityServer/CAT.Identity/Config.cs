@@ -16,6 +16,7 @@ namespace CAT.Identity
         {
             new ApiResource("resource_catalog"){Scopes={"catalog_fullpermission"}},
             new ApiResource("resource_wishlist"){Scopes={"wishlist_fullpermission"}},
+            new ApiResource("resource_gateway"){Scopes={"gateway_fullpermission"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -33,6 +34,7 @@ namespace CAT.Identity
             {
                 new ApiScope("catalog_fullpermission", "Full Permission for Catalog Service"),
                 new ApiScope("wishlist_fullpermission", "Full Permission for Wishlist Service"),
+                new ApiScope("gateway_fullpermission", "Full Permission for Gateway"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -45,7 +47,7 @@ namespace CAT.Identity
                     ClientId = "WebClient",
                     ClientSecrets = {new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
-                    AllowedScopes = {"catalog_fullpermission",IdentityServerConstants.LocalApi.ScopeName}
+                    AllowedScopes = {"catalog_fullpermission", "gateway_fullpermission", IdentityServerConstants.LocalApi.ScopeName}
                 },
                 new Client
                 {
@@ -54,7 +56,7 @@ namespace CAT.Identity
                     AllowOfflineAccess = true,
                     ClientSecrets = {new Secret("secret".Sha256())},
                     AllowedGrantTypes = GrantTypes.ResourceOwnerPassword,
-                    AllowedScopes = {"wishlist_fullpermission", IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.OfflineAccess, IdentityServerConstants.LocalApi.ScopeName, "roles" },
+                    AllowedScopes = {"wishlist_fullpermission", "gateway_fullpermission", IdentityServerConstants.StandardScopes.Email, IdentityServerConstants.StandardScopes.OpenId, IdentityServerConstants.StandardScopes.Profile, IdentityServerConstants.StandardScopes.OfflineAccess, IdentityServerConstants.LocalApi.ScopeName, "roles" },
                     
                     // Access Token Lifetime: 1 hour
                     AccessTokenLifetime = 1*60*60,

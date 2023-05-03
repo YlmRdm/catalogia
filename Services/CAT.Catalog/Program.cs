@@ -1,4 +1,5 @@
-﻿using CAT.Catalog.Services;
+﻿using CAT.Catalog.Dtos;
+using CAT.Catalog.Services;
 using CAT.Catalog.Settings;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -34,6 +35,20 @@ builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var serviceProvider = scope.ServiceProvider;
+
+    var categoryService = serviceProvider.GetRequiredService<ICategoryService>();
+
+    if (!(await categoryService.GetAllAsync()).Data.Any())
+    {
+        await categoryService.CreateAsync(new CategoryCreateDto { Name = "Home" });
+        await categoryService.CreateAsync(new CategoryCreateDto { Name = "Kitchen" });
+        await categoryService.CreateAsync(new CategoryCreateDto { Name = "Garden" });
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
