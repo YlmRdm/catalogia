@@ -19,15 +19,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAT.Identity", "IdentitySer
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CAT.Wishlist", "CAT.Wishlist", "{A3ED4E61-00C6-4C05-AF33-569D7C57C894}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAT.Wishlist.API", "Services\CAT.Wishlist\CAT.Wishlist.API\CAT.Wishlist.API.csproj", "{4B7D48E5-A85C-44E7-B507-EAB8863A24F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAT.Wishlist.API", "Services\CAT.Wishlist\CAT.Wishlist.API\CAT.Wishlist.API.csproj", "{4B7D48E5-A85C-44E7-B507-EAB8863A24F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAT.Wishlist.Application", "Services\CAT.Wishlist\CAT.Wishlist.Application\CAT.Wishlist.Application.csproj", "{BDDEE5E7-B2AE-461E-8EFA-69C1F7ACA9A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAT.Wishlist.Application", "Services\CAT.Wishlist\CAT.Wishlist.Application\CAT.Wishlist.Application.csproj", "{BDDEE5E7-B2AE-461E-8EFA-69C1F7ACA9A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAT.Wishlist.Domain", "Services\CAT.Wishlist\CAT.Wishlist.Domain\CAT.Wishlist.Domain.csproj", "{8B854DB2-7B71-403C-8EAE-B12945683536}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAT.Wishlist.Domain", "Services\CAT.Wishlist\CAT.Wishlist.Domain\CAT.Wishlist.Domain.csproj", "{8B854DB2-7B71-403C-8EAE-B12945683536}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAT.Wishlist.Domain.Core", "Services\CAT.Wishlist\CAT.Wishlist.Domain.Core\CAT.Wishlist.Domain.Core.csproj", "{5D5CF95B-EBE4-4A21-A350-83ABDCB4D342}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAT.Wishlist.Domain.Core", "Services\CAT.Wishlist\CAT.Wishlist.Domain.Core\CAT.Wishlist.Domain.Core.csproj", "{5D5CF95B-EBE4-4A21-A350-83ABDCB4D342}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAT.Wishlist.Infrastructure", "Services\Cat.Wishlist\CAT.Wishlist.Infrastructure\CAT.Wishlist.Infrastructure.csproj", "{C4F62085-5E2B-40DA-9A35-DDBD682E9896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CAT.Wishlist.Infrastructure", "Services\Cat.Wishlist\CAT.Wishlist.Infrastructure\CAT.Wishlist.Infrastructure.csproj", "{C4F62085-5E2B-40DA-9A35-DDBD682E9896}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{1C1796D8-229E-462B-A05F-909D795FE6A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CAT.Gateway", "Gateways\CAT.Gateway\CAT.Gateway.csproj", "{26BB9810-922B-487A-B094-6A9DDD714695}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +71,10 @@ Global
 		{C4F62085-5E2B-40DA-9A35-DDBD682E9896}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4F62085-5E2B-40DA-9A35-DDBD682E9896}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4F62085-5E2B-40DA-9A35-DDBD682E9896}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26BB9810-922B-487A-B094-6A9DDD714695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BB9810-922B-487A-B094-6A9DDD714695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BB9810-922B-487A-B094-6A9DDD714695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BB9810-922B-487A-B094-6A9DDD714695}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -82,6 +90,7 @@ Global
 		{8B854DB2-7B71-403C-8EAE-B12945683536} = {A3ED4E61-00C6-4C05-AF33-569D7C57C894}
 		{5D5CF95B-EBE4-4A21-A350-83ABDCB4D342} = {A3ED4E61-00C6-4C05-AF33-569D7C57C894}
 		{C4F62085-5E2B-40DA-9A35-DDBD682E9896} = {A3ED4E61-00C6-4C05-AF33-569D7C57C894}
+		{26BB9810-922B-487A-B094-6A9DDD714695} = {1C1796D8-229E-462B-A05F-909D795FE6A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {36CB8EA1-B2A3-4C43-8689-ED803153A141}
